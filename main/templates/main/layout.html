@@ -1,0 +1,43 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+		<link href="{% static 'main/css/style_vs.css' %}" rel="stylesheet" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+		<main>
+			<header>
+				<div class="container head">
+					<div class="row">
+						<div class="text">
+							<div class="name">
+                                <a href="{% url 'home' %}">BooKS.Ru</a>
+							</div>
+						</div>
+						<nav>
+							<ul>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Портфолио</a></li>
+							<li><a href="#">Наши услуги</a></li>
+							<li><a href="http://127.0.0.1:8000/accounts/login/">Авторизация</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+        </main>
+        {% block content %}
+
+        {% endblock %}
