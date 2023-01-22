@@ -26,18 +26,21 @@
 <div class="log">
         {% csrf_token %}
 <table>
+<div class="container">
+	<div class="block">
+		<table>
+			<tr>
+				<td class="username">{{ form.username.label_tag }}</td>
+				<td class="username">{{ form.username  }}</td>
+			</tr>
 
-<tr>
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username  }}</td>
-</tr>
-
-<tr>
-  <td>{{ form.password.label_tag }}</td>
-  <td>{{ form.password }}</td>
-</tr>
-</table>
-    </div>
+			<tr>
+				<td>{{ form.password.label_tag }}</td>
+				<td>{{ form.password }}</td>
+			</tr>	
+		</table>
+	</div>
+</div>
     <div class="login">
         <br><button class="btn btn-success" type="submit">Войти</button>
         <br>
