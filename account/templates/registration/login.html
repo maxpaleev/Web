@@ -8,13 +8,13 @@
 		</div>
   	<form class="kirill" method="post">
         {% if form.errors %}
-    <p>Ваш логин или пароль не правильный. Попробуйте ещё раз</p>
+    <p id="error__name">Ваш логин или пароль не правильный. Попробуйте ещё раз!</p>
     {% endif %}
 			{% csrf_token %}
 			<table class="sumbit">
-				{{ form.as_p }}
+				<div id="user__input__login">{{ form.as_p }}</div>
 				<tr>
-					<td><input class="button" type="submit" value="Войти в Лику"></td>
+					<td><input class="button" type="submit" value="Войти"></td>
 				</tr>                
 			</table>
 		</form>
