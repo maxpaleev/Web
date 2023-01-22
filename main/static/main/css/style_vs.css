@@ -227,6 +227,10 @@ footer ul li a:hover{
 	border: 3px solid gray;
 }
 
+ul.errorlist.nonfield {
+    display: none;
+}
+
 .login .name h2{
 	padding-top: 10px;
 	padding-bottom: 5px;

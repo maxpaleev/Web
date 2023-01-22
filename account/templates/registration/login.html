@@ -7,6 +7,9 @@
 			<h2>Вход</h2>
 		</div>
   	<form class="kirill" method="post">
+        {% if form.errors %}
+    <p>Ваш логин или пароль не правильный. Попробуйте ещё раз</p>
+    {% endif %}
 			{% csrf_token %}
 			<table class="sumbit">
 				{{ form.as_p }}
