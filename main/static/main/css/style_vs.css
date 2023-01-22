@@ -206,9 +206,11 @@ footer ul li a:hover{
 .login{
 	text-align: center;
 	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .sumbit{
+	background-color: aliceblue;
 	margin: 10px auto;
 }
 
@@ -218,5 +220,14 @@ footer ul li a:hover{
 }
 
 .kirill{
-	margin-top: 20px;
+	margin-top: 10px;
+	background-color: aliceblue;
+	width: 300px;
+	margin: 10px auto;
+	border: 3px solid gray;
+}
+
+.login .name h2{
+	padding-top: 10px;
+	padding-bottom: 5px;
 }
