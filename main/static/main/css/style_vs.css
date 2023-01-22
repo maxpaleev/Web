@@ -254,12 +254,15 @@ input#id_password,
 input#id_username{
 	height: 20px;
 	margin-left: 10px;
+	margin-top: 10px;
+	transition: all .1s ease-in-out;
 }
 
 input#id_password{
 	margin-left: 17px;
 }
 
-#user__input__login p label{
-	padding-top: 3px;
+input#id_password:hover,
+input#id_username:hover{
+	border: 3px solid rgb(213, 213, 14);
 }
