@@ -211,7 +211,8 @@ footer ul li a:hover{
 
 .sumbit{
 	background-color: aliceblue;
-	margin: 10px auto;
+	margin: 5px auto;
+	margin-bottom: 10px;
 }
 
 input#id_password,
@@ -228,6 +229,8 @@ input#id_username,
 	height: 43px;
 	background-color: transparent;
 	border: none;
+	padding-bottom: 10px;
+	height: 60px;
 }
 
 .kirill{
@@ -252,6 +255,7 @@ ul.errorlist.nonfield {
 
 #error__name{
 	padding:20px 20px;
+	padding-bottom: 0;
 	color:red;
 	font-size: 20px;
 }
@@ -259,6 +263,7 @@ ul.errorlist.nonfield {
 
 #user__input__login{
 	padding:20px;
+	padding-bottom:5px;
 	font-size: 25px;
 }
 
@@ -290,6 +295,6 @@ input#id_username:hover{
 	font-size: 25px;
 	text-shadow: 0 0 20px rgb(255, 145, 0);
 	width: 104px;
-	height: 43px;
+	height: 60px;
 	cursor: pointer;
 }
