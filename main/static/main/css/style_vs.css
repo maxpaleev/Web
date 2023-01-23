@@ -214,10 +214,20 @@ footer ul li a:hover{
 	margin: 10px auto;
 }
 
+input#id_password,
+input#id_username,
+.button{
+	transition: all .45s ease-in-out;
+}
+
 .sumbit .button{
 	font-size: 25px;
 	padding: 5px 15px;
-	color:rgb(217, 136, 31);
+	color:rgb(255, 145, 0);
+	width: 104px;
+	height: 43px;
+	background-color: transparent;
+	border: none;
 }
 
 .kirill{
@@ -225,7 +235,9 @@ footer ul li a:hover{
 	background-color: aliceblue;
 	width: 400px;
 	margin: 10px auto;
-	border: 3px solid gray;
+	max-height: 265px;
+	min-height: 155px;
+	box-shadow: 0 0 100px gray;
 }
 
 ul.errorlist.nonfield {
@@ -250,6 +262,11 @@ ul.errorlist.nonfield {
 	font-size: 25px;
 }
 
+#user__input__login p label{
+	color: rgb(0, 0, 0);
+	text-shadow: 0 0 2px rgb(159, 152, 152);
+}
+
 input#id_password,
 input#id_username{
 	height: 20px;
@@ -264,5 +281,15 @@ input#id_password{
 
 input#id_password:hover,
 input#id_username:hover{
-	border: 3px solid rgb(213, 213, 14);
+	color: black;
+	box-shadow: 0 0 20px rgb(200, 175, 175);
+}
+
+.sumbit td:hover,
+.button:hover{
+	font-size: 25px;
+	text-shadow: 0 0 20px rgb(255, 145, 0);
+	width: 104px;
+	height: 43px;
+	cursor: pointer;
 }
