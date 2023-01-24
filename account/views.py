@@ -1,15 +1,20 @@
 from django.shortcuts import render
-from django.urls import reverse_lazy
-from django.contrib.auth.forms import UserCreationForm
-from django.views.generic.edit import CreateView
+
+from .forms import UserCreate
 
 
-# Создаем здесь представления.
-def home(request):
-    return render(request, "registration/home.html")
+def signup(request):
+    error = ''
+    if request.method == 'POST':
+        form = UserCreate(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = 'Форма была неверной'
 
-
-class SignUp(CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy("login")
-    template_name = "registration/signup.html"
+    form = UserCreate()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'registration/signup.html', data)

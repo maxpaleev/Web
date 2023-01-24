@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'account'
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +130,6 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL = "http://127.0.0.1:8000/"
+
+AUTH_USER_MODEL = 'account.User'
+#
