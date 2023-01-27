@@ -203,8 +203,13 @@ footer ul li a:hover{
 }
 
 
-.container .login{
-	position: inherit;
+.box-reg{
+	display: block;
+}
+
+input#id_password,
+input#id_email{
+	display: block;
 }
 
 

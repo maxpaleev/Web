@@ -10,22 +10,24 @@
 		<div class="reg">
 			<form method="post">
 				{% csrf_token %}
-				<tr>
-						<td>{{ form.email.help_text}}</td>
-						<td>{{ form.email }}</td>
-				</tr>
-				<tr>
-						<td>{{ form.username }}</td>
-				</tr>
-				<tr>
-						<td>{{ form.password }}</td>
-				</tr>
-				<tr>
-						<td>{{ form.first_name }}</td>
-				</tr>
-				<tr>
-						<td>{{ form.last_name }}</td>
-				</tr>
+				<div class="box-reg">
+					<tr>
+							<td>{{ form.email.help_text}}</td>
+							<td>{{ form.email }}</td>
+					</tr>
+					<tr>
+							<td>{{ form.username }}</td>
+					</tr>
+					<tr>
+							<td>{{ form.password }}</td>
+					</tr>
+					<tr>
+							<td>{{ form.first_name }}</td>
+					</tr>
+					<tr>
+							<td>{{ form.last_name }}</td>
+					</tr>
+				</div>
 		
 				<div class="sign">
 						<br><button class="btn btn-success" type="submit">Зарегистрироваться</button>
