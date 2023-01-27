@@ -8,10 +8,10 @@ from .manager import UserManager
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True, help_text='Ваша почта')
-    username = models.CharField(_('username'), max_length=50, unique=True)
-    first_name = models.CharField(_('first name'), max_length=30, blank=True,)
-    last_name = models.CharField(_('last name'), max_length=30, blank=True)
-    password = models.CharField(_('password'), max_length=20, blank=True)
+    username = models.CharField(_('username'), max_length=50, unique=True, help_text='Ваш логин')
+    first_name = models.CharField(_('first name'), max_length=30, blank=False, help_text='Ваше имя')
+    last_name = models.CharField(_('last name'), max_length=30, blank=False, help_text='Ваша фамилия')
+    # password = models.CharField(_('password'), max_length=20, blank=True, help_text='Ваш пароль')
     # is_active = models.BooleanField(_('active'), default=True)
     is_superuser=models.BooleanField(_('superuser'), default=False)
     is_staff=models.BooleanField(_('staff'), default=False)
