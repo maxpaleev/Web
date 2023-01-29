@@ -223,20 +223,26 @@ input#id_last_name{
 
 .box--reg{
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	text-align: center;
 	font-size: 23px;
 	font-family: 'Fira Sans', sans-serif;
 	background-color: rgb(227, 233, 239);
 	width: 400px;
-	height: 460px;
+	height: 470px;
 	margin: 10px auto;
 	padding: 20px 0;
 	box-shadow: 0 0 100px rgb(79, 78, 78);
 }
 
 .login{
+	display: flex;
+  justify-content: flex-start;
+  text-align: center;
 	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;
+	height: 300px;
 }
 
 
@@ -245,18 +251,24 @@ body > div > div > div.box--reg > form > button,
 input[type="submit" i] {
 	padding: 5px 10px;
 	margin: 20px auto;
-	margin-bottom: 0;
+	margin-bottom: 10px;
 	background-color: transparent;
 	border: none;
-	font-size: 20px;
+	font-size: 22px;
 	transition: all .3s ease-in-out;
 	color: rgb(253, 165, 0) ;
+}
+
+input[type="submit" i]{
+	font-size: 24px;
+	margin-bottom: 25px;
+	margin-top: 30px;
 }
 
 body > div > div > div.box--reg > form > button:hover,
 input[type="submit" i]:hover{
 	text-shadow: 0 0 20px rgb(255, 181, 43);
-	font-size: 21px;
+	font-size: 26px;
 	cursor: pointer;
 }
 
@@ -275,7 +287,7 @@ input#id_last_name:focus{
 .id_vhod{
 	text-align: center;
 	margin: 20px auto;
-	font-size: 18px;
+	font-size: 20px;
 	display: flex;
 	justify-content: center;
 	padding: 0 3px;
@@ -291,7 +303,7 @@ input#id_last_name:focus{
 
 .id_vhod a:hover{
 	text-shadow: 0 0 20px rgb(255, 181, 43);
-	font-size: 23px;
+	font-size: 21px;
 	cursor: pointer;
 	text-align: center;
 	padding: 0 10px;
@@ -301,8 +313,7 @@ input#id_last_name:focus{
 .error--login{
 	margin-bottom: 20px;
 }
-label{
-	display: flex;
-	justify-content: center;
-	margin: 5px auto;
+.log{
+	margin: 10px auto;
+	padding: 0;
 }

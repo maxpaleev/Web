@@ -22,7 +22,7 @@
 				{% if user.is_authenticated %}
 					<p class="error--login">У вашего аккаунта нет доступа к этой странице. Попробуйте войти снова!</p>
 				{% else %}
-					<p class="error--login">Please login to see this page.</p>
+					<p class="error--login">Пожалуйста, войдите, чтобы увидеть эту страницу.</p>
 				{% endif %}
 				{% endif %}
 				{% csrf_token %}
@@ -36,8 +36,7 @@
 						<td>{{ form.username }}</td>
 					</tr>
 					<tr>
-                    <tr>
-                        <td>{{ form.email.label_tag }}</td>
+            <td>{{ form.email.label_tag }}</td>
 						<td>{{ form.email }}</td>
 					<tr>
 						<td>{{ form.password.label_tag }}</td>
@@ -45,14 +44,14 @@
 					</tr>
 				</table>
 
-				<input  type="submit" value="login" />
+				<input  type="submit" value="Войти" />
 				<input type="hidden" name="next" value="{{ next }}" />
 			</form>
 
 			{# Assumes you setup the password_reset view in your URLconf #}
-			<p class="id_vhod"><a href="{% url 'password_reset' %}">Забыли Пароль?</a></p>
+			<p class="id_vhod log">Забыли Пароль?<a href="{% url 'password_reset' %}">Восстановить</a></p>
 
-			<p class="id_vhod"><a href="http://127.0.0.1:8000/account">Зарегестрироваться</a></p>
+			<p class="id_vhod log">Нет Аккаунта? <a href="http://127.0.0.1:8000/reg/sign_up">Зарегестрироваться</a></p>
 		</div>
 	</div>
 </div>
