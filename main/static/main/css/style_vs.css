@@ -223,7 +223,7 @@ input#id_last_name{
 
 .box--reg{
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	text-align: center;
 	font-size: 23px;
 	font-family: 'Fira Sans', sans-serif;
@@ -241,7 +241,8 @@ input#id_last_name{
 
 
 
-body > div > div > div.box--reg > form > button{
+body > div > div > div.box--reg > form > button,
+input[type="submit" i] {
 	padding: 5px 10px;
 	margin: 20px auto;
 	margin-bottom: 0;
@@ -252,7 +253,8 @@ body > div > div > div.box--reg > form > button{
 	color: rgb(253, 165, 0) ;
 }
 
-body > div > div > div.box--reg > form > button:hover{
+body > div > div > div.box--reg > form > button:hover,
+input[type="submit" i]:hover{
 	text-shadow: 0 0 20px rgb(255, 181, 43);
 	font-size: 21px;
 	cursor: pointer;
@@ -261,6 +263,7 @@ body > div > div > div.box--reg > form > button:hover{
 
 input#id_password1:focus,
 input#id_password2:focus,
+input#id_password:focus,
 input#id_email:focus,
 input#id_username:focus,
 input#id_first_name:focus,
@@ -292,4 +295,14 @@ input#id_last_name:focus{
 	cursor: pointer;
 	text-align: center;
 	padding: 0 10px;
+}
+
+
+.error--login{
+	margin-bottom: 20px;
+}
+label{
+	display: flex;
+	justify-content: center;
+	margin: 5px auto;
 }

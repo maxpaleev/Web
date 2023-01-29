@@ -14,22 +14,27 @@
 		<div class="box--reg login">
 			<form method="post" action="{% url 'login' %}">
 				{% if form.errors %}
-				<p>Your username and password didn't match. Please try again.</p>
+				<p class="error--login">Ваше имя пользователя или пароль не совпадают. Пожалуйста, попробуйте еще раз.
+				</p>
 				{% endif %}
 				
 				{% if next %}
 				{% if user.is_authenticated %}
-					<p>Your account doesn't have access to this page. To proceed,
-					please login with an account that has access.</p>
+					<p class="error--login">У вашего аккаунта нет доступа к этой странице. Попробуйте войти снова!</p>
 				{% else %}
-					<p>Please login to see this page.</p>
+					<p class="error--login">Please login to see this page.</p>
 				{% endif %}
 				{% endif %}
 				{% csrf_token %}
 				<table>
 					<tr>
-                        <td>{{ form.username.label_tag }}</td>
+						<td>{{ form.email.label_tag }}</td>
+						<td>{{ form.email }}</td>
+					</tr>
+					<tr>
+						<td>{{ form.username.label_tag }}</td>
 						<td>{{ form.username }}</td>
+					</tr>
 					<tr>
 						<td>{{ form.password.label_tag }}</td>
 						<td>{{ form.password }}</td>
@@ -43,9 +48,8 @@
 			{# Assumes you setup the password_reset view in your URLconf #}
 			<p class="id_vhod"><a href="{% url 'password_reset' %}">Забыли Пароль?</a></p>
 
-			<p class="id_vhod"><a href="http://127.0.0.1:8000/reg/sign_up">Зарегестрироваться</a></p>
+			<p class="id_vhod"><a href="http://127.0.0.1:8000/account">Зарегестрироваться</a></p>
 		</div>
 	</div>
 </div>
-
 {% endblock %}
