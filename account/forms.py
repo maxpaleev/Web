@@ -1,15 +1,16 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm
+from account.models import User
+from django.forms import TextInput, PasswordInput, forms, CharField, EmailField, EmailInput
 
-from .models import User
 
+class RegisterForm(UserCreationForm):
+    username = CharField(label='Логин', widget=TextInput(attrs={'class': 'form-control'})),
+    first_name = CharField(label='Имя', widget=TextInput(attrs={'class': 'form-control'})),
+    last_name = CharField(label='Фамилия', widget=TextInput(attrs={'class': 'form-control'})),
+    email = EmailField(label='Почта', widget=EmailInput(attrs={'class': 'form-control'})),
+    password1 = CharField(label='Пароль', widget=PasswordInput(attrs={'class': 'form-control', 'autocomplete': 'new-password'})),
+    password2 = CharField(label='Повтор пароля', widget=PasswordInput(attrs={'class': 'form-control', 'autocomplete': 'new-password'})),
 
-class UserCreate(UserCreationForm):
-    class Meta(UserCreationForm):
+    class Meta:
         model = User
-        fields = ['email', 'username', 'password', 'first_name', 'last_name', 'is_superuser', 'is_staff']
-
-
-class UserChange(UserChangeForm):
-    class Meta(UserChangeForm):
-        model = User
-        fields = ('email', 'username', 'password', 'first_name', 'last_name', 'is_superuser', 'is_staff')
+        fields = ['username', 'email', 'first_name', 'last_name','password1', 'password2']
