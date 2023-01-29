@@ -9,21 +9,21 @@ from account.managers import UserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(verbose_name='username',
+    username = models.CharField(verbose_name='Логин',
                                 max_length=255,
                                 unique=True
                                 )
-    first_name = models.CharField(verbose_name='first_name',
+    first_name = models.CharField(verbose_name='Имя',
                                   max_length=255,
                                   unique=True,
                                   blank=False,
                                   )
-    last_name = models.CharField(verbose_name='last_name',
+    last_name = models.CharField(verbose_name='Фамилия',
                                  max_length=255,
                                  unique=True,
                                  blank=False,
                                  )
-    email = models.EmailField(verbose_name='email address',
+    email = models.EmailField(verbose_name='Почта',
                               null=True,
                               blank=True
                               )
@@ -36,8 +36,9 @@ class User(AbstractBaseUser, PermissionsMixin):
                                    )
     objects = UserManager()
 
-    USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email']
+    EMAIL_FIELD = "email"
+    USERNAME_FIELD = "username"
+    REQUIRED_FIELDS = ["email"]
 
     class Meta:
         verbose_name = 'user'
