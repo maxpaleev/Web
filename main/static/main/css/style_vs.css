@@ -268,25 +268,28 @@ input#id_last_name:focus{
 	font-size: 18px;
 	box-shadow: 0 0 20px rgb(190, 171, 171);
 }
-input#id_password1:focus,
-input#id_password2:focus,
 
 .id_vhod{
+	text-align: center;
 	margin: 20px auto;
 	font-size: 18px;
 	display: flex;
 	justify-content: center;
+	padding: 0 3px;
 }
 
 .id_vhod a{
 	text-decoration: none;
-	font-size: 23px;
+	font-size: 20px;
 	transition: all .3s ease-in-out;
 	color: rgb(253, 165, 0);
 }
+
 
 .id_vhod a:hover{
 	text-shadow: 0 0 20px rgb(255, 181, 43);
 	font-size: 23px;
 	cursor: pointer;
+	text-align: center;
+	padding: 0 10px;
 }
