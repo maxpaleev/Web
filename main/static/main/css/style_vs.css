@@ -13,6 +13,7 @@ body{
 	left: 0;
 	width: 100%;
 	max-width: 1200px;
+	height: 100%;
 	margin: 0 auto;
 	background-color:rgb(200, 175, 175);
 }
@@ -24,6 +25,7 @@ body{
 .row{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .head{
@@ -331,4 +333,29 @@ input#id_last_name:focus{
 	flex-direction: column;
 	justify-content: center;
 	padding-top: 10px;
+}
+
+.box--profile{
+	display: flex;
+	font-size: 23px;
+	font-family: 'Fira Sans', sans-serif;
+	background-color: rgb(227, 233, 239);
+	width: 400px;
+	height: 420px;
+	margin: 40px auto;
+	padding: 20px 0;
+	box-shadow: 0 0 100px rgb(79, 78, 78);
+}
+
+
+.profile{
+	flex-direction: column;
+	justify-content:unset;
+}
+
+ .box--information{
+	width: 300px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgb(79, 78, 78);
+	background-color: rgb(193, 198, 203);
 }
