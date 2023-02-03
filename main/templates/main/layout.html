@@ -31,7 +31,12 @@
 							<li><a href="#about">О нас</a></li>
 							<li><a href="#port">Портфолио</a></li>
 							<li><a href="#usl">Наши услуги</a></li>
-							<li><a href="http://127.0.0.1:8000/account/login/">Авторизация</a></li>
+                                {% if user.is_authenticated %}
+                                    <li><a href="{% url 'logout'%}">Выйти</a></li>
+                                    <li><a class="dws-li">Пользователь: {{ user.get_username }}</a></li>
+                                {% else %}
+                                    <li><a href="{% url 'login'%}">Войти</a></li>
+                                {% endif %}
 							</ul>
 						</nav>
 					</div>
