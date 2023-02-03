@@ -327,7 +327,8 @@ input#id_last_name:focus{
 }
 
 .login table,
-.login table tr{
+.login table tr,
+.box--information ul{
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -337,6 +338,7 @@ input#id_last_name:focus{
 
 .box--profile{
 	display: flex;
+	justify-content: center;
 	font-size: 23px;
 	font-family: 'Fira Sans', sans-serif;
 	background-color: rgb(227, 233, 239);
@@ -355,7 +357,15 @@ input#id_last_name:focus{
 
  .box--information{
 	width: 300px;
-	margin: 20px auto;
+	margin: 30px auto;
 	box-shadow: 0 0 10px rgb(79, 78, 78);
 	background-color: rgb(193, 198, 203);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+hr{
+	margin-top: 20px;
+	opacity: 0.5;
 }
