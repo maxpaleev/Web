@@ -8,4 +8,4 @@ from account.models import User
 class home(ListView):
     model = User
     template_name = 'profile/home.html'
-    context_object_name = 'artists'
+    context_object_name = 'inf'

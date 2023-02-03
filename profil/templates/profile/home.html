@@ -20,14 +20,16 @@
 				</nav>
 				<hr	color="gray" width="400">
 				<div class="box--information">
+                    {% for i in inf %}
 					<ul>
 						<li>Ваш Логин</li>
-						<li>cds</li>
+						<li>{{ i.username }}</li>
 						<li>Ваша Почта</li>
-						<li>cds</li>
+						<li>{{ i.email }}</li>
 						<li>Ваша фотография</li>
 						<li>csd</li>
 					</ul>
+                    {% endfor %}
 				</div>
 			</div>
 		</div>
