@@ -9,7 +9,7 @@ from account.managers import UserManager
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(_('username'), max_length=255, unique=True)
-    email = models.EmailField(_('email address'),null=True, blank=True)
+    email = models.EmailField(_('email address'),null=False, blank=True)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
     is_active = models.BooleanField(_('active'), default=True)
     is_staff = models.BooleanField(_('staff'), default=False)

@@ -19,20 +19,22 @@
 					</div>
 				</nav>
 				<div class="box--information">
+                    {% for artist in artists %}
 					<table>
 						<td>
 							<tr>Ваш Логин</tr>
-							<tr>cds</tr>
+							<tr>{{ artist.username }}</tr>
 						</td>
 						<td>
 							<tr>Ваша почта</tr>
-							<tr>dsc</tr>
+							<tr>{{ artist.email }}</tr>
 						</td>
 						<td>
 							<tr>Ваша фотография</tr>
 							<tr>cdscds</tr>
 						</td>
 					</table>
+                    {% endfor %}
 				</div>
 			</div>
 		</div>
