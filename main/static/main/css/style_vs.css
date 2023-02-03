@@ -334,6 +334,7 @@ input#id_last_name:focus{
 	flex-direction: column;
 	justify-content: center;
 	padding-top: 10px;
+	font-size: 23px;
 }
 
 .box--profile{
