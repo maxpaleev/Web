@@ -229,7 +229,7 @@ input#id_last_name{
 	font-family: 'Fira Sans', sans-serif;
 	background-color: rgb(227, 233, 239);
 	width: 400px;
-	height: 470px;
+	height: 420px;
 	margin: 10px auto;
 	padding: 20px 0;
 	box-shadow: 0 0 100px rgb(79, 78, 78);
@@ -242,7 +242,8 @@ input#id_last_name{
 	flex-direction: column;
 	align-items: center;
 	padding-top: 30px;
-	height: 300px;
+	height: 450px;
+	width: 450px;
 }
 
 
@@ -309,11 +310,25 @@ input#id_last_name:focus{
 	padding: 0 10px;
 }
 
-
 .error--login{
-	margin-bottom: 20px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 350px;
+	margin: 0 auto
 }
+
 .log{
 	margin: 10px auto;
 	padding: 0;
+}
+
+.login table,
+.login table tr{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 10px;
 }
