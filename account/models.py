@@ -2,48 +2,24 @@ from django.db import models
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.base_user import AbstractBaseUser
 
-# from django.utils.translation import ugettext_lazy as _
-
+from django.utils.translation import gettext_lazy as _
 
 from account.managers import UserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(verbose_name='Логин',
-                                max_length=255,
-                                unique=True
-                                )
-    first_name = models.CharField(verbose_name='Имя',
-                                  max_length=255,
-                                  unique=True,
-                                  blank=False,
-                                  )
-    last_name = models.CharField(verbose_name='Фамилия',
-                                 max_length=255,
-                                 unique=True,
-                                 blank=False,
-                                 )
-    email = models.EmailField(verbose_name='Почта',
-                              null=True,
-                              blank=True
-                              )
+    username = models.CharField(_('username'), max_length=255, unique=True)
+    email = models.EmailField(_('email address'),null=True, blank=True)
+    date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
+    is_active = models.BooleanField(_('active'), default=True)
+    is_staff = models.BooleanField(_('staff'), default=False)
 
-    is_active = models.BooleanField(verbose_name='active',
-                                    default=False
-                                    )
-    is_staff = models.BooleanField(verbose_name='staff',
-                                   default=False
-                                   )
     objects = UserManager()
 
-    EMAIL_FIELD = "email"
-    USERNAME_FIELD = "username"
-    REQUIRED_FIELDS = ["email"]
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email']
 
     class Meta:
-        verbose_name = 'user'
-        verbose_name_plural = 'users'
-        unique_together = ['username']
-
-    def __str__(self):
-        return self.username
+        verbose_name = _('user')
+        verbose_name_plural = _('users')
+        unique_together = ('username', 'email')

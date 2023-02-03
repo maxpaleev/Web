@@ -6,6 +6,7 @@ from .forms import RegisterForm
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
+
         username = request.POST['username']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
