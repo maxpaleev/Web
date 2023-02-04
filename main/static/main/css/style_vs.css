@@ -348,7 +348,7 @@ input#id_last_name:focus{
 	font-family: 'Fira Sans', sans-serif;
 	background-color: rgb(227, 233, 239);
 	width: 400px;
-	height: 520px;
+	height: 620px;
 	margin: 40px auto;
 	padding: 20px 0;
 	box-shadow: 0 0 100px rgb(79, 78, 78);
@@ -375,8 +375,8 @@ hr{
 	opacity: 0.5;
 }
 
-.container .profile {
-	height: 1000px;
+.profiles {
+	height: 1100px;
 }
 
 .textNotWieght {
@@ -400,4 +400,12 @@ hr{
 
 .settings--profile:hover{
 	text-shadow: 0 0 20px rgb(255, 181, 43);
+}
+
+.out a{
+	font-size:25px;
+}
+
+.out a:hover{
+	font-size: 25px;
 }

@@ -2,7 +2,7 @@
 {% block title %}Профиль{% endblock %}
 <title>{{ title }}</title>
 {% block content %}
-	<div class="container profile">
+	<div class="container profiles">
 		<div class="box reg">
 			<div class="name">
 				<h2>
@@ -32,7 +32,7 @@
 						</ul>
 					{% endfor %}
 						<button value="Настроить" class="settings--profile">Настроить</button>
-						<a href="{% url 'logout' %}">Выйти</a>
+						<p class="id_vhod log out"><a href="{% url 'logout' %}">Выйти</a></p>
 					</div>
 				</div>
 			</div>

@@ -37,14 +37,14 @@
 					</tr>
 				</table>
 
-				<input  type="submit" value="Войти" />
+				<input  type="submit" value="Войти"/>
 				<input type="hidden" name="next" value="{{ next }}" />
 			</form>
 
 			{# Assumes you setup the password_reset view in your URLconf #}
 			<p class="id_vhod log">Забыли Пароль?<a href="{% url 'password_reset' %}">Восстановить</a></p>
 
-			<p class="id_vhod log">Нет Аккаунта? <a href='{% url 'reg' %}'>Зарегистрироваться</a></p>
+			<p class="id_vhod log">Нет Аккаунта? <a href="{% url 'reg' %}">Зарегистрироваться</a></p>
 		</div>
 	</div>
 </div>
