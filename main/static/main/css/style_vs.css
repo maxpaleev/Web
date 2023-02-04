@@ -386,3 +386,18 @@ hr{
 .box--information li b{
 	font-size: 25px;
 }
+
+.settings--profile{
+	border: none;
+	background-color: transparent;
+	font-size: 25px;
+	color: rgb(253, 165, 0);
+	transition: all .3s ease-in;
+	cursor: pointer;
+	width: 200px;
+	margin: 10px auto;
+}
+
+.settings--profile:hover{
+	text-shadow: 0 0 20px rgb(255, 181, 43);
+}
