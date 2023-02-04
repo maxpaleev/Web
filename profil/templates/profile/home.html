@@ -19,7 +19,7 @@
 							</ul>
 						</div>
 					</nav>
-					<hr	color="gray" width="400">
+					<hr	color="gray" width="600">
 					<div class="box--information">
 					{% for i in inf %}
 						<ul>
@@ -28,14 +28,15 @@
 							<li><b>Ваша Почта</b></li>
 							<li class="textNotWieght">{{ i.email }}</li>
 							<li><b>Ваша фотография</b></li>
-							<li>csd</li>
+							<li class="photo--profile">csd</li>
 						</ul>
 					{% endfor %}
-						<button value="Настроить" class="settings--profile">Настроить</button>
-						<p class="id_vhod log out"><a href="{% url 'logout' %}">Выйти</a></p>
 					</div>
+					<button value="Настроить" class="settings--profile">Настроить</button>
+					<p class="id_vhod log out"><a href="{% url 'logout' %}">Выйти</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
+
 {% endblock %}
