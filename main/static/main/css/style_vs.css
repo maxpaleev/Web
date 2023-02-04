@@ -283,7 +283,7 @@ input#id_email:focus,
 input#id_username:focus,
 input#id_first_name:focus,
 input#id_last_name:focus{
-	font-size: 18px;
+	font-size: 17px;
 	box-shadow: 0 0 20px rgb(190, 171, 171);
 }
 
@@ -347,7 +347,7 @@ input#id_last_name:focus{
 	font-size: 23px;
 	font-family: 'Fira Sans', sans-serif;
 	background-color: rgb(227, 233, 239);
-	width: 400px;
+	width: 600px;
 	height: 620px;
 	margin: 40px auto;
 	padding: 20px 0;
@@ -361,10 +361,10 @@ input#id_last_name:focus{
 }
 
  .box--information{
-	width: 300px;
+	width: 500px;
 	margin: 30px auto;
-	box-shadow: 0 0 10px rgb(79, 78, 78);
-	background-color: rgb(193, 198, 203);
+	box-shadow: 0 0 10px rgb(202, 195, 195);
+	background-color: rgb(227, 233, 239);
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -376,7 +376,7 @@ hr{
 }
 
 .profiles {
-	height: 1100px;
+	height: 1000px;
 }
 
 .textNotWieght {
@@ -395,7 +395,8 @@ hr{
 	transition: all .3s ease-in;
 	cursor: pointer;
 	width: 200px;
-	margin: 10px auto;
+	margin: 20px auto;
+	margin-bottom: 10px;
 }
 
 .settings--profile:hover{
@@ -408,4 +409,21 @@ hr{
 
 .out a:hover{
 	font-size: 25px;
+}
+
+.login input#id_password,
+.login input#id_username{
+	width: 288px;
+}
+
+.place{
+	font-size: 25px;
+}
+
+
+.photo--profile{
+	margin: 10px 0;
+	width: 200px;
+	height: 200px;
+	background-color: black;
 }

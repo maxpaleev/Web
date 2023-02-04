@@ -28,11 +28,11 @@
 				{% csrf_token %}
 				<table>
 					<tr>
-						<td>Логин</td>
+						<td class="place">Логин</td>
 						<td>{{ form.username }}</td>
 					</tr>
 					<tr>
-						<td>{{ form.password.label }}</td>
+						<td class="place">{{ form.password.label }}</td>
 						<td>{{ form.password }}</td>
 					</tr>
 				</table>
