@@ -1,11 +1,11 @@
 from django.views.generic.list import ListView
 
 from account.models import User
+from django.shortcuts import render
 
 
 # импорт модели Artists
 
-class home(ListView):
-    model = User
-    template_name = 'profile/home.html'
-    context_object_name = 'inf'
+def home(request):
+    inf = User.objects.filter(id = request.user.id)
+    return render(request, 'profile/home.html', {'inf': inf})
