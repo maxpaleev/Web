@@ -33,7 +33,7 @@
 							<li><a href="#usl">Наши услуги</a></li>
                                 {% if user.is_authenticated %}
                                     <li><a href="{% url 'logout'%}">Выйти</a></li>
-                                    <li><a class="dws-li">Пользователь: {{ user.get_username }}</a></li>
+                                    <li><a class="dws-li" href="{% url 'profile' %}">{{ user.get_username }}</a></li>
                                 {% else %}
                                     <li><a href="{% url 'login'%}">Войти</a></li>
                                 {% endif %}

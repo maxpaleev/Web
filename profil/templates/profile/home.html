@@ -2,34 +2,37 @@
 {% block title %}Профиль{% endblock %}
 <title>{{ title }}</title>
 {% block content %}
-	<div class="container">
-		<div class="name">
-			<h2>
-				Аккаунт
-			</h2>
-		</div>
-		<div class="box--profile">
-			<div class="row profile">
-				<nav>
-					<div class="text">
+	<div class="container profile">
+		<div class="box reg">
+			<div class="name">
+				<h2>
+					Аккаунт
+				</h2>
+			</div>
+			<div class="box--profile">
+				<div class="row profile">
+					<nav>
+						<div class="text">
+							<ul>
+								<li><a href="#">Профиль</a></li>
+								<li><a href="#">Сделки</a></li>
+							</ul>
+						</div>
+					</nav>
+					<hr	color="gray" width="400">
+					<div class="box--information">
+					{% for i in inf %}
 						<ul>
-							<li><a href="#">Профиль</a></li>
-							<li><a href="#">Сделки</a></li>
+							<li><b>Ваш Логин</b></li>
+							<li class="textNotWieght">{{ i.username }}</li>
+							<li><b>Ваша Почта</b></li>
+							<li class="textNotWieght">{{ i.email }}</li>
+							<li><b>Ваша фотография</b></li>
+							<li>csd</li>
 						</ul>
+					{% endfor %}
+						<a href=""></a>
 					</div>
-				</nav>
-				<hr	color="gray" width="400">
-				<div class="box--information">
-                    {% for i in inf %}
-					<ul>
-						<li>Ваш Логин</li>
-						<li>{{ i.username }}</li>
-						<li>Ваша Почта</li>
-						<li>{{ i.email }}</li>
-						<li>Ваша фотография</li>
-						<li>csd</li>
-					</ul>
-                    {% endfor %}
 				</div>
 			</div>
 		</div>

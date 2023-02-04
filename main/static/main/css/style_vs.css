@@ -323,7 +323,7 @@ input#id_last_name:focus{
 
 .log{
 	margin: 10px auto;
-	padding: 00;
+	padding: 0;
 }
 
 .login table,
@@ -337,6 +337,10 @@ input#id_last_name:focus{
 	font-size: 23px;
 }
 
+.box--information ul{
+	margin: 10px 0;
+}
+
 .box--profile{
 	display: flex;
 	justify-content: center;
@@ -344,7 +348,7 @@ input#id_last_name:focus{
 	font-family: 'Fira Sans', sans-serif;
 	background-color: rgb(227, 233, 239);
 	width: 400px;
-	height: 420px;
+	height: 520px;
 	margin: 40px auto;
 	padding: 20px 0;
 	box-shadow: 0 0 100px rgb(79, 78, 78);
@@ -369,4 +373,16 @@ input#id_last_name:focus{
 hr{
 	margin-top: 20px;
 	opacity: 0.5;
+}
+
+.container .profile {
+	height: 1000px;
+}
+
+.textNotWieght {
+	color: rgb(63, 63, 63);
+	opacity: 0.8;
+}
+.box--information li b{
+	font-size: 25px;
 }
