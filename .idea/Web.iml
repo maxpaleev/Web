@@ -25,6 +25,7 @@
       <list>
         <option value="$MODULE_DIR$/templates" />
         <option value="$MODULE_DIR$/profil/templates" />
+        <option value="$MODULE_DIR$/account/media" />
       </list>
     </option>
   </component>
