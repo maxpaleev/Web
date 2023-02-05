@@ -285,6 +285,8 @@ input#id_first_name:focus,
 input#id_last_name:focus{
 	font-size: 17px;
 	box-shadow: 0 0 20px rgb(190, 171, 171);
+	border: none;
+	background-color: transparent;
 }
 
 .id_vhod{
@@ -427,4 +429,10 @@ hr{
 	height: 200px;
 	background-color: black;
 	object-fit: cover;
+}
+
+input{
+	border: none;
+	background-color: transparent;
+	border-bottom: 1.5px solid rgba(202, 195, 195, 5);
 }
