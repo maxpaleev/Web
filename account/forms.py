@@ -6,9 +6,20 @@ from django.forms import TextInput, PasswordInput, forms, CharField, EmailField,
 class RegisterForm(UserCreationForm):
     username = CharField(label='Логин', widget=TextInput(attrs={'class': 'form-control'})),
     email = EmailField(label='Почта', widget=EmailInput(attrs={'class': 'form-control'})),
-    password1 = CharField(label='Пароль', widget=PasswordInput(attrs={'class': 'form-control', 'autocomplete': 'new-password'})),
-    password2 = CharField(label='Повтор пароля', widget=PasswordInput(attrs={'class': 'form-control', 'autocomplete': 'new-password'})),
+    password1 = CharField(label='Пароль',
+                          widget=PasswordInput(attrs={'class': 'form-control', 'autocomplete': 'new-password'})),
+    password2 = CharField(label='Повтор пароля',
+                          widget=PasswordInput(attrs={'class': 'form-control', 'autocomplete': 'new-password'})),
 
     class Meta:
         model = User
-        fields = ['username', 'email','password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2']
+
+
+class ChangeForm(UserCreationForm):
+    username = CharField(label='Логин', widget=TextInput(attrs={'class': 'form-control'})),
+    email = EmailField(label='Почта', widget=EmailInput(attrs={'class': 'form-control'})),
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']

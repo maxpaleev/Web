@@ -33,7 +33,7 @@
 					{% endfor %}
 					</div>
 					<div class="box--information" id="tab-2">
-					<button value="Настроить" class="settings--profile">Настроить</button>
+                        <a href="{% url 'change' %}"></a><button value="Настроить" class="settings--profile">Настроить</button>
 					<p class="id_vhod log out"><a href="{% url 'logout' %}">Выйти</a></p>
 				</div>
 			</div>
