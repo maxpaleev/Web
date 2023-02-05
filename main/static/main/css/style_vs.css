@@ -436,3 +436,32 @@ input{
 	background-color: transparent;
 	border-bottom: 1.5px solid rgba(202, 195, 195, 5);
 }
+
+
+.b2{
+	position: absolute;
+	margin-top: 82px;
+	background-color: black;
+	height: 395px;
+}
+
+.active{
+	z-index: 1000;
+}
+
+.text ul li .active{
+	background-color: bisque;
+	opacity: 1;
+	box-shadow: 0 0 5px bisque;
+}
+
+.tabs__but{
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+	opacity: 0.5;
+	text-align: center;
+	cursor: pointer;
+	width: 100px;
+	height: 30px;
+}
