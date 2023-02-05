@@ -23,5 +23,5 @@ urlpatterns = [
     path('', include('main.urls')),
     path('account/', include('django.contrib.auth.urls')),
     path('reg/', include('account.urls')),
-    path('profile', include('profil.urls'))
+    path('profile/', include('profil.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
