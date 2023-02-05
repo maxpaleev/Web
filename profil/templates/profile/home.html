@@ -14,13 +14,13 @@
 					<nav>
 						<div class="text">
 							<ul>
-								<li><button class="tabs__but activ" data-tab="tab-1" type="button">Профиль</button></li>
+								<li><button class="tabs__but active" data-tab="tab-1" type="button">Профиль</button></li>
 								<li><button class="tabs__but" data-tab="tab-2" type="button">Сделки</button></li>
 							</ul>
 						</div>
 					</nav>
 					<hr	color="gray" width="600">
-					<div class="box--information activ" id="tab-1">
+					<div class="box--information active" id="tab-1">
 					{% for i in inf %}
 						<ul>
 							<li><b>Ваш Логин</b></li>
@@ -32,7 +32,8 @@
 						</ul>
 					{% endfor %}
 					</div>
-					<div class="box--information" id="tab-2">
+					<div class="box--information b2" id="tab-2">
+					</div>
 					<button value="Настроить" class="settings--profile">Настроить</button>
 					<p class="id_vhod log out"><a href="{% url 'logout' %}">Выйти</a></p>
 				</div>
