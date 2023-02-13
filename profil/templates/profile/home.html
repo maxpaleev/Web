@@ -2,42 +2,44 @@
 {% block title %}Профиль{% endblock %}
 <title>{{ title }}</title>
 {% block content %}
-	<div class="container profiles">
-		<div class="box reg">
-			<div class="name">
-				<h2>
-					Аккаунт
-				</h2>
-			</div>
-			<div class="box--profile">
-				<div class="row profile">
-					<nav>
-						<div class="text">
-							<ul>
-								<li><button class="tabs__but activ" data-tab="tab-1" type="button">Профиль</button></li>
-								<li><button class="tabs__but" data-tab="tab-2" type="button">Сделки</button></li>
-							</ul>
-						</div>
-					</nav>
-					<hr	color="gray" width="600">
-					<div class="box--information activ" id="tab-1">
-					{% for i in inf %}
+<div class="container profiles">
+	<div class="box reg">
+		<div class="name">
+			<h2>
+				Аккаунт
+			</h2>
+		</div>
+		<div class="box--profile">
+			<div class="row profile">
+				<nav>
+					<div class="text">
 						<ul>
-							<li><b>Ваш Логин</b></li>
-							<li class="textNotWieght">{{ i.username }}</li>
-							<li><b>Ваша Почта</b></li>
-							<li class="textNotWieght">{{ i.email }}</li>
-							<li><b>Ваша фотография</b></li>
-							<li class="photo--profile"></li>
+							<li><button class="tabs__but active" data-tab="tab-1" type="button">Профиль</button></li>
+							<li><button class="tabs__but" data-tab="tab-2" type="button">Сделки</button></li>
 						</ul>
 					</div>
-					<div class="box--information" id="tab-2">
-                        <a href="{% url 'change' i.id  %}"><button value="Настроить" class="settings--profile">Настроить</button></a>
-                        <p class="id_vhod log out"><a href="{% url 'logout' %}">Выйти</a></p>
-                    {% endfor %}
+				</nav>
+				<hr color="gray" width="600">
+				<div class="box--information active" id="tab-1">
+					{% for i in inf %}
+					<ul>
+						<li><b>Ваш Логин</b></li>
+						<li class="textNotWieght">{{ i.username }}</li>
+						<li><b>Ваша Почта</b></li>
+						<li class="textNotWieght">{{ i.email }}</li>
+						<li><b>Ваша фотография</b></li>
+						<li class="photo--profile"></li>
+					</ul>
 				</div>
+				<div class="box--information b2" id="tab-2">
+					efsfd
+				</div>
+				<a href="{% url 'change' i.id  %}"><button value="Настроить" class="settings--profile">Настроить</button></a>
+				<p class="id_vhod log out"><a href="{% url 'logout' %}">Выйти</a></p>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
-	<script src="../../app.js"></script>
+</div>
+<script src="../../app.js"></script>
 {% endblock %}
