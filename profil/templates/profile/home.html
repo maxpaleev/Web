@@ -1,4 +1,5 @@
 {% extends 'main/layout.html' %}
+{% load static %}
 {% block title %}Профиль{% endblock %}
 <title>{{ title }}</title>
 {% block content %}
@@ -41,5 +42,5 @@
 		</div>
 	</div>
 </div>
-<script src="../../app.js"></script>
+<script src='{% static 'main/JS/app.js' %}'></script>
 {% endblock %}
