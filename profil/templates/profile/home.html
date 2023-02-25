@@ -15,13 +15,13 @@
 				<nav>
 					<div class="text">
 						<ul>
-							<li><button class="tabs__but active" data-tab="tab-1" type="button">Профиль</button></li>
-							<li><button class="tabs__but" data-tab="tab-2" type="button">Сделки</button></li>
+							<li><button class="tabs__but active" data-tab="tab_1" type="button">Профиль</button></li>
+							<li><button class="tabs__but" data-tab="tab_2" type="button">Сделки</button></li>
 						</ul>
 					</div>
 				</nav>
 				<hr color="gray" width="600">
-				<div class="box--information active" id="tab-1">
+				<div class="box--information active" id="tab_1">
 					{% for i in inf %}
 					<ul>
 						<li><b>Ваш Логин</b></li>
@@ -32,7 +32,7 @@
 						<li class="photo--profile"></li>
 					</ul>
 				</div>
-				<div class="box--information b2" id="tab-2">
+				<div class="box--information b2" id="tab_2">
 					efsfd
 				</div>
 				<a href="{% url 'change' i.id  %}"><button value="Настроить" class="settings--profile">Настроить</button></a>
