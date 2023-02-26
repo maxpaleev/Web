@@ -18,7 +18,7 @@ TabsBtn.forEach(function(item) {
 		});
 	
 		curr.classList.add("active");
-		CurrTab.classList.remove("active")
+		CurrTab.classList.add("active")
 
 	});
 });

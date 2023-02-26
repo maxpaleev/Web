@@ -428,7 +428,7 @@ hr{
 	margin: 10px 0;
 	width: 200px;
 	height: 200px;
-	background-color: black;
+	background-color: rgb(0, 0, 0);
 	object-fit: cover;
 }
 
@@ -442,8 +442,9 @@ input{
 .b2{
 	position: absolute;
 	margin-top: 82px;
-	background-color: black;
+	background-color: aliceblue;
 	height: 395px;
+	justify-content: flex-start;
 }
 
 .active{
@@ -465,4 +466,28 @@ input{
 	cursor: pointer;
 	width: 100px;
 	height: 30px;
+}
+
+.sdl{
+	display: flex;
+	justify-content: left;
+	flex-direction: column;
+	margin: 10px 15px;
+	padding: 10px 15px;
+	background-color: bisque;
+	box-shadow: 0 0 10px black;
+}
+
+.nach{
+	display: flex;
+	flex-direction: row;
+	margin-top: 3px;
+}
+
+.username{
+	font-size: 26px;
+}
+
+.time{
+	padding-right: 20px;
 }
