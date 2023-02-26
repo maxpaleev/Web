@@ -1,24 +1,24 @@
 
-const TabsBut = document.querySelectorAll(".tabs__but");
-const TabItem = document.querySelectorAll(".box--information")
+const TabsBtn = document.querySelectorAll(".tabs__but");
+const TabItem = document.querySelectorAll(".box--information");
 
-TabsBut.forEach(function(item) {
+TabsBtn.forEach(function(item) {
 	item.addEventListener("click", function() {
 		let curr = item;
 		let TabId = curr.getAttribute("data-tab");
 		let CurrTab = document.querySelector(TabId);
 
 		
-		TabsBut.forEach(function(item) {
-		item.classList.remove("active")
+		TabsBtn.forEach(function(item) {
+			item.classList.remove("active")
 		});
 
 		TabItem.forEach(function(item) {
-		item.classList.remove("active")
+			item.classList.remove("active")
 		});
 	
 		curr.classList.add("active");
-		CurrTab.classList.add('active');
+		CurrTab.classList.remove("active")
 
 	});
 });
