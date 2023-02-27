@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+<form method = "post", enctype="multipart/form-data">
+    {% for image in images %}
+<div>
+   {{ image.title }}
+</div>
+<div>
+   <img src='{{ image.image.url }}'  alt="Картинка">
+</div>
+{% endfor %}{% endblock %}
+   <button type="submit"> Submit</button>
+</form>

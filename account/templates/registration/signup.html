@@ -8,14 +8,14 @@
 			<h2>Регистрация</h2>
 		</div>
 		<div class="box--reg">
-			<form method="post">
+			<form method="post" enctype="multipart/form-data">
             {% csrf_token %}
 
                 {% for f in form %}
                     <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label}} </label>{{ f }} </p>
+{#                    {{ f.as_p }}#}
 
                 {% endfor %}
-
 				<button class="btn btn-success" type="submit">Зарегистрироваться</button>
 				<p class="id_vhod">Есть аккаунт?<a href="http://127.0.0.1:8000/account/login/"> Войти</a></p>
 
